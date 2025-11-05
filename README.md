@@ -1,6 +1,4 @@
 # 📦 NexChain Logistics – EMEA Shipment Performance Analysis  
-*Data-Driven Insights into Delivery Efficiency and Operational Bottlenecks (May 2024 – March 2025)*  
-
 ![SQL Enpoint Analytics](https://img.shields.io/badge/SQL-Fabric_Gen2-blue?logo=sql)
 ![PowerBI](https://img.shields.io/badge/PowerBI-Dashboard-yellow?logo=powerbi)
 ![Fabric](https://img.shields.io/badge/Fabric-Data_Platform-purple?logo=microsoft)
@@ -14,10 +12,10 @@
 - [Data Structure & Initial Checks](#-data-structure--initial-checks)  
 - [Executive Summary](#-executive-summary)  
 - [Insights Deep Dive](#-insights-deep-dive)  
-  - [Category 1: Shipment Trends & Delay Rates](#category-1-shipment-trends--delay-rates)  
-  - [Category 2: OpCo Performance Overview](#category-2-opco-performance-overview)  
-  - [Category 3: Warehouse & Hub Efficiency (EDC Focus)](#category-3-warehouse--hub-efficiency-edc-focus)  
-  - [Category 4: Seasonal & Operational Factors](#category-4-seasonal--operational-factors)  
+  - [Shipment Trends & Delay Rates](#category-1-shipment-trends--delay-rates)  
+  - [OpCo Performance Overview](#category-2-opco-performance-overview)  
+  - [Warehouse & Hub Efficiency (EDC Focus)](#category-3-warehouse--hub-efficiency-edc-focus)  
+  - [Seasonal & Operational Factors](#category-4-seasonal--operational-factors)  
 - [Recommendations](#-recommendations)  
 - [Assumptions & Caveats](#️-assumptions--caveats)  
 - [Final Remarks](#-final-remarks)
@@ -70,7 +68,7 @@ NexChain's shipments analysis of 5M records across May 2024- March 2025 shows mo
 
 ## 🔍 Delayed Shipments Deep Dive  
 
-Order Analysis Dashboard
+### Order Analysis Dashboard
 <img width="1245" height="737" alt="Delayed Shipment Analysis" src="https://github.com/user-attachments/assets/54b16d10-173b-47a0-9808-36796e502b04" />
 
 ### Shipment Trends & Delay Rates  
@@ -153,6 +151,6 @@ Targeted regional optimization, better warehouse balancing, and proactive foreca
 
 *Authored by: Minh Nguyen — Business Intelligence Developer, Data Analyst*  
 *Linkedin: www.linkedin.com/in/minh-n-nguyen*
-**Project Duration:** May 2024 – March 2025  
-**Tools Used:** SQL (Fabric Gen2), Power BI, Tableau, Python, Excel  
+*Email: mim.n.nguyen@gmail.com* 
+**Tools Used:** SQL Endpoint Analytics, Dataflow Gen2, Fabric Lakehouse, Power BI, Excel  
 
