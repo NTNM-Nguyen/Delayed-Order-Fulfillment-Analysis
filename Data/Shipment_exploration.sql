@@ -4,7 +4,7 @@ AS Select *
 FROM [Raw_Data]. [dbo].[Special_Model]
 where [JDE_PLANNED_DESPATCH_DATE_TIME] > '2024-05-01" and [JDE_PLANNED_DESPATCH_DATE_TIME] < "2025-03-31"
 and [RICOH_WORKDAYS_ORACLE_SAD_TO_JDF_PLANNED_ARRIVAL] > -100
-and [ABBREVIATION] in ('FI’, ‘NO', ‘ZA', 'HE', 'HU’, ‘EN', ‘IE', 'PO', 'AT’, ‘SP’, ‘IT', 'CH', F’, ‘UK’, ‘PL’, ‘DE’, ‘FR’,’ES’,’NL’)
+and [ABBREVIATION] in ('FI’, ‘NO', ‘ZA', 'HE', 'HU’, ‘EN', ‘IE', 'PO', 'AT’, ‘SP’, ‘IT', 'CH', F’, ‘UK’, ‘PL’, ‘DE’, ‘FR’,’ES’,’NL’);
 
 -- Standardize OpCo names and remove duplicates
 WITH Cleaned_OpCo AS (
