@@ -24,7 +24,7 @@
 
 ## 🏢 Project Background  
 
-NexChain Logistics, founded in 1980, is a EMEA supply chain and logistics company operating across 27 Operating Companies (OpCos) in the region. The company’s business model focuses on managing end-to-end office supplies shipments from Distribution Centers to local OpCos and end customers.  
+NexChain Logistics, founded in 1980, is a supply chain and logistics company operating across 27 Operating Companies (OpCos) in the EMEA region. The company’s business model focuses on managing end-to-end office supplies shipments from Distribution Centers to local OpCos and end customers.  
 
 Every year, NexChain accumulates millions of shipment records. However, these datasets were historically underultilized for performance optimization. As part of the Supply Chain Analytics initiative, I collaborate with the Head of Supply Chain and Order Fulfillment to:  
 - Extract insights and develop recommendations to improve shipment delays.  
@@ -34,17 +34,17 @@ The goal was to improve on-time delivery, reduce in-transit inventory, and optim
 
 ---
 
-## 🧱 Data Structure & Initial Checks  
+## Data Structure & Initial Checks  
 
 The dataset originates from the Fabric Gen2 Data Flow, imported into the Lakehouse SQL Analytics Endpoint for analysis. It contains approximately 5 million shipment records spanning May 2024 – March 2025.  
 
 Each record represents a shipment order, detailing the origin warehouse, destination Operating Company (OpCo), actual dispatch date, planned arrival date, and expected delivery date. The delivery gap metric, pre-calculated by the Supply Chain team, already accounts for weekends and local holidays. Information on the actual received date is not available in the dataset.
 
 Database tables:  
-- Table 1: Shipment_Analysis_EMEA – Core shipment data (OpCo, source warehouse, planned vs. actual shipment dates, calculated delay gap).  
-- Table 2: OpCo_Master – Operating company reference data including country, operational type (direct/indirect), and region.  
-- Table 3: Warehouse_Master – Hub and satellite warehouse hierarchy and metrics.  
-- Table 4: Calendar_Dimension – Date intelligence including holidays and working day flags.  
+- Shipment_Analysis_EMEA: Core shipment data (OpCo, source warehouse, planned vs. actual shipment dates, calculated delay gap).  
+- OpCo_Master: Operating company reference data including country, operational type (direct/indirect), and region.  
+- Warehouse_Master: Hub and satellite warehouse hierarchy and metrics.  
+- Calendar_Dimension: Date intelligence including holidays and working day flags.  
 
 Entity Relationship Diagram:  
 ![ERD](https://github.com/user-attachments/assets/995ff790-02e8-40b2-a9a3-efc6fbe155e7)
@@ -54,14 +54,14 @@ To focus on the most importance metrics and key performers, Order Fulfillment te
 - Limited analysis to Direct OpCos 
 - Removed indirect and intercompany shipments.  
 - Validated missing delivery dates against dispatch logs (0.8% imputed).
-  
+
+The full analytical workflow can be found here:  
 - [SQL Cleaning & Preprocessing Queries](link)  
-- [Targeted Business Question Queries](link)  
-- [Shipment Sample Data](link)  
+- [Shipment Sample Data](Data/Sample/Shipment_Sample.xlsx)  
 
 ---
 
-## 💼 Executive Summary  
+## Executive Summary  
 NexChain's shipments analysis of 5M records across May 2024- March 2025 shows monthly deliveries averaging 460k across 27 Operating Companies, with five key OpCos: Germany, France, Spain, Italy, and the UK account for 80% of total delayed shipments. Shipping warehouse EDC processes 66% of all deliveries, specializing in France, though cooperations with the UK, Italy and Germany is a concern with 60-70% delayed rate. Targeted the top 5 OpCos, along with improving the workflow of the main shipping hub EDC, will yield the greatest reduction in delay frequency and duration. NexChain can benefit from strategic shipment forecast for summer and holiday periods, to tackle long in-transit month (August) and high volumn month (September). This will improve communication, customer satisfaction and minimize associate cost. 
 
 ---
@@ -119,7 +119,7 @@ NexChain's shipments analysis of 5M records across May 2024- March 2025 shows mo
 
 ---
 
-## 💡 Recommendations  
+## Recommendations  
 
 1. Prioritize Spain, Germany, and France for root-cause investigation and targeted improvement.  
 2. Distribute EDC shipment load among satellite hubs during high-demand months.  
@@ -139,7 +139,7 @@ NexChain's shipments analysis of 5M records across May 2024- March 2025 shows mo
 
 ---
 
-## 🧩 Final Remarks  
+## Final Remarks  
 
 This analysis provides NexChain with a quantitative foundation for improving on-time delivery and operational visibility.  
 Targeted regional optimization, better warehouse balancing, and proactive forecasting are expected to achieve:  
