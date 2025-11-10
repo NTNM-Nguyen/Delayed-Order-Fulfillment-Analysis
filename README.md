@@ -47,11 +47,11 @@ Database tables:
 - Table 4: Calendar_Dimension – Date intelligence including holidays and working day flags.  
 
 Entity Relationship Diagram:  
-*(Insert ERD visualization here)*  
+![ERD](https://github.com/user-attachments/assets/995ff790-02e8-40b2-a9a3-efc6fbe155e7)
 
 To focus on the most importance metrics and key performers, Order Fulfillment team agreed on the following data scopes:
 - Excluded outliers of delivery gaps exceeding 100 days.  
-- Limited analysis to Direct OpCos.  
+- Limited analysis to Direct OpCos 
 - Removed indirect and intercompany shipments.  
 - Validated missing delivery dates against dispatch logs (0.8% imputed).
   
@@ -149,8 +149,10 @@ Targeted regional optimization, better warehouse balancing, and proactive foreca
 
 ---
 
+**Tools Used:** SQL Endpoint Analytics, Dataflow Gen2, Fabric Lakehouse, Power BI, Excel  
+
 *Authored by: Minh Nguyen — Business Intelligence Developer, Data Analyst*  
 *Linkedin: www.linkedin.com/in/minh-n-nguyen*
 *Email: mim.n.nguyen@gmail.com* 
-**Tools Used:** SQL Endpoint Analytics, Dataflow Gen2, Fabric Lakehouse, Power BI, Excel  
+
 
