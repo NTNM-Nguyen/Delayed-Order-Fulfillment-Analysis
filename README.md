@@ -1,4 +1,4 @@
-# 📦 NexChain Logistics – EMEA Shipment Performance Analysis  
+# NexChain Logistics – EMEA Orders Fulfillment Analysis  
 ![SQL Enpoint Analytics](https://img.shields.io/badge/SQL-Fabric_Gen2-blue?logo=sql)
 ![PowerBI](https://img.shields.io/badge/PowerBI-Dashboard-yellow?logo=powerbi)
 ![Fabric](https://img.shields.io/badge/Fabric-Data_Platform-purple?logo=microsoft)
