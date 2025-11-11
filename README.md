@@ -56,7 +56,7 @@ To focus on the most importance metrics and key performers, Order Fulfillment te
 - Validated missing delivery dates against dispatch logs (0.8% imputed).
 
 The full analytical workflow can be found here:  
-- [SQL Cleaning & Preprocessing Queries](link)  
+- [SQL Cleaning & Preprocessing Queries](Data/Shipment_exploration.sql)  
 - [Shipment Sample Data](Data/Sample/Shipment_Sample.xlsx)  
 
 ---
@@ -75,8 +75,7 @@ NexChain's shipments analysis of 5M records across May 2024- March 2025 shows mo
 <img width="886" height="257" alt="Overview" src="https://github.com/user-attachments/assets/199af69c-2c2a-45fc-9d8c-6d7acca3709f" />
 
 - Out of 5M total shipments, 1M were delayed (23% delay ratio, 5-day average delay).  
-- Germany recorded the highest volume of delayed orders (190K; 26% delayed).  
-- Spain had the highest delay ratio (40%), nearly every second order delayed.  
+- Germany recorded the highest volume of delayed orders (190K, 26% delayed), Spain had the highest delay ratio (40%), nearly every second order delayed.  
 - 88% of all delays were less than one week, classified as typical delay. 
 
 ---
@@ -86,11 +85,8 @@ NexChain's shipments analysis of 5M records across May 2024- March 2025 shows mo
 
 <img width="685" height="692" alt="No  Delayed" src="https://github.com/user-attachments/assets/de3a10a8-3d8a-439e-b742-2097677a9be0" />
 
-- The top 5 OpCos accounted for 63% of shipments and 80% of delays.  
-- Peak delay months were July (83K delayed) and September (91K delayed).  
-- Delay trends shifted seasonally:  
-  - May–October 2024: Spain and Germany dominated.  
-  - November 2024–March 2025: France became the main driver.
+- The top 5 OpCos accounted for 63% of shipments and 80% of delays: Germany, Spain, France, Italy, United Kingdom.
+- Peak delay months were July (83K delayed) and September (91K delayed). Delay trends shifted seasonally: May–October 2024 observed the highest number of delayed contributed by Spain and Germany, while November 2024–March 2025's delays came from France.
     
 ---
 
@@ -101,11 +97,8 @@ NexChain's shipments analysis of 5M records across May 2024- March 2025 shows mo
   <img width="402" height="182" alt="Warehouse" src="https://github.com/user-attachments/assets/89a14f3d-fa2b-4f40-9cd2-8570454fd87e" />
  | <img width="393" height="182" alt="EDC" src="https://github.com/user-attachments/assets/59a9b851-089f-4f9b-93fb-db7865304136" />
 
-- EDC handled 63% of all shipments.  
-- EDC’s outbound performance varied by destination:  
-  - France: 15% delayed  
-  - Italy: 72% delayed  
-  - Spain/UK: ~65% delayed  
+- EDC handled the majority (63%) of all shipments with 2M in volume, 26% of which is delayed driven by non-focus OpCos.
+- EDC’s outbound performance varied by destination. While EDC has an effective cooperation with French with the highest volume of 1M shipments and low delay rate of 15%, other non-focus OpCOs experience poor delivery SLAs with 72% delayed for Italy, ~65% delayed for Spain and UK
 - EDC overload correlated with high outbound volume in July–September.  
 
 ---
@@ -113,39 +106,38 @@ NexChain's shipments analysis of 5M records across May 2024- March 2025 shows mo
 ### Seasonal & Operational Factors  
 <img width="502" height="512" alt="longest duration" src="https://github.com/user-attachments/assets/8bb8f670-2fd1-41b9-b2fe-cc8319591d4e" />
 
-- France’s delivery time peaked at 27 days in August due to summer workforce shortages.  
-- Delays spiked post-holiday (September) due to capacity recovery lag.  
-- These predictable cycles suggest the need for demand forecasting and better shift scheduling.  
+- France’s delivery time had the longest in-transit duration at 27 days in August due to summer workforce shortages. Number of Delays spiked post-holiday (September) due to capacity recovery lag. These predictable cycles suggest the need for demand forecasting and better shifts scheduling.  
 
----
+--- 
 
 ## Recommendations  
 
-1. Prioritize Spain, Germany, and France for root-cause investigation and targeted improvement.  
-2. Distribute EDC shipment load among satellite hubs during high-demand months.  
-3. Implement shipment cycle forecasting to anticipate summer and post-holiday peaks.  
-4. Improve coordination between EDC and OpCos for real-time schedule visibility.  
-5. Build Power BI KPI dashboards (Average Delay Days, On-Time Rate, Volume by OpCo) for weekly performance tracking.  
+**Prioritize Spain, Germany, and France for Root-Cause Investigation and Targeted Improvement**
+
+- These three OpCos account for about 60% of all delayed shipments (Spain 28%, Germany 21%, France 11%).
+- Spain shows the highest delay ratio (40%), while Germany leads in absolute delayed volume (0.19M orders).
+- Focus root-cause investigation on process inefficiencies such as carrier capacity constraints, customs clearance delays, and local distribution handoff timing.
+
+**Distribute EDC Shipment Load Among Satellite Hubs During High-Demand Months**
+
+- The EDC warehouse processes 63% of all shipments but experiences performance drops during July–September when volumes peak (up to 90K delayed orders per month).
+- Redirecting 15–20% of EDC shipments to nearby satellite hubs could balance workload and reduce average transit delay from 5.3 to under 3 days.
+- Implement shared shipment tracking and exception reporting between EDC and top 5 OpCos to reduce reactive follow-ups and misaligned delivery windows.
+
+**Implement Shipment Cycle Forecasting to Anticipate Summer and Post-Holiday Peaks**
+
+- Delay peaks align with workforce fluctuations in August (average 27-day transit time for France) and rebound volumes in September (highest delayed volume at 91K orders).
+- Introduce forecast-based cycle planning to align shipping capacity, staffing, and carrier availability ahead of known seasonal surges.
 
 ---
 
-## ⚙️ Assumptions & Caveats  
+## Assumptions & Caveats  
 
 - Shipment gap values already adjusted for weekends and holidays.  
 - Missing received dates were excluded.  
 - Outliers with >100-day delay removed (0.2%).  
 - Intercompany transfers excluded from scope.  
-- Workforce impact during holidays assumed based on HR staffing data and shipment trends.  
-
----
-
-## Final Remarks  
-
-This analysis provides NexChain with a quantitative foundation for improving on-time delivery and operational visibility.  
-Targeted regional optimization, better warehouse balancing, and proactive forecasting are expected to achieve:  
-- 8–12% improvement in on-time delivery rates.  
-- Reduced in-transit inventory.  
-- Higher customer satisfaction and SLA compliance.  
+- Workforce impact during holidays assumed based on HR staffing data and shipment trends.   
 
 ---
 
