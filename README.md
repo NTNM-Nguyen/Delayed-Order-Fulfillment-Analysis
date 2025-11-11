@@ -8,21 +8,19 @@
 
 ## Table of Contents  
 - [Project Background](#-project-background)  
-- [ Insights & Recommendations Overview](#-insights--recommendations-overview)  
 - [Data Structure & Initial Checks](#-data-structure--initial-checks)  
 - [Executive Summary](#-executive-summary)  
-- [Insights Deep Dive](#-insights-deep-dive)  
+- [Delayed Shipments Deep Dive](#-Delayed-Shipments-deep-dive)  
   - [Shipment Trends & Delay Rates](#shipment-trends--delay-rates)  
   - [OpCo Performance Overview](#opco-performance-overview)  
   - [Warehouse & Hub Efficiency (EDC Focus)](#warehouse--hub-efficiency-edc-focus)  
   - [Seasonal & Operational Factors](#seasonal--operational-factors)  
 - [Recommendations](#-recommendations)  
 - [Assumptions & Caveats](#️-assumptions--caveats)  
-- [Final Remarks](#-final-remarks)
 
 ---
 
-## 🏢 Project Background  
+## Project Background  
 
 NexChain Logistics, founded in 1980, is a supply chain and logistics company operating across 27 Operating Companies (OpCos) in the EMEA region. The company’s business model focuses on managing end-to-end office supplies shipments from Distribution Centers to local OpCos and end customers.  
 
@@ -55,7 +53,7 @@ To focus on the most importance metrics and key performers, Order Fulfillment te
 - Removed indirect and intercompany shipments.  
 - Validated missing delivery dates against dispatch logs (0.8% imputed).
 
-The full analytical workflow can be found here:  
+The analytical workflow can be found here:  
 - [SQL Cleaning & Preprocessing Queries](Data/Shipment_exploration.sql)  
 - [Shipment Sample Data](Data/Sample/Shipment_Sample.xlsx)  
 
@@ -66,10 +64,11 @@ NexChain's shipments analysis of 5M records across May 2024- March 2025 shows mo
 
 ---
 
-## 🔍 Delayed Shipments Deep Dive  
+## Delayed Shipments Deep Dive  
 
 ### Order Analysis Dashboard
-<img width="1245" height="737" alt="Delayed Shipment Analysis" src="https://github.com/user-attachments/assets/54b16d10-173b-47a0-9808-36796e502b04" />
+https://github.com/user-attachments/assets/28a3c29d-cb8f-4ef2-8bf1-b0375ed49836
+
 
 ### Shipment Trends & Delay Rates  
 <img width="886" height="257" alt="Overview" src="https://github.com/user-attachments/assets/199af69c-2c2a-45fc-9d8c-6d7acca3709f" />
